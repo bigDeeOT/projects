@@ -1,0 +1,1 @@
+void alienInit(void);
