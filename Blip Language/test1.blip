@@ -1,0 +1,105 @@
+var L 1
+defun foo params smarap 
+	if ! L
+		var L 42
+	fi
+	output L
+nufed
+
+var void1 call foo args sgra
+text \n
+
+var A 1
+var B 1
+text "global A before function call is: "
+output A
+text \n
+text "global B before function call is: "
+output B
+text \n
+
+defun out_fun params H smarap
+	set A 42
+	var A 10
+	set B 10
+	defun in_fun params smarap
+		
+		set B 11
+	nufed
+	var void call in_fun args sgra
+nufed
+
+var void call out_fun args B sgra
+
+text "global A after function call is: "
+output A
+text \n
+text "global B after function call is: "
+output B
+text \n
+
+
+defun sayHello params e smarap
+set d e
+nufed
+
+var d 3
+var e 10
+
+text "global d before function call is: "
+output d
+text \n
+var j call sayHello args 5 sgra 
+text "global d after function call is: "
+output d
+text \n
+
+var a 20001
+var b 0
+var x 0
+var y 0
+var z 10
+
+ if - a 20000
+	do < x 10
+		set y 0
+		set b ! b
+		if  || b < z 2 
+			do < y z
+				text "^_^ "
+				set y + y 1
+			od
+			if b
+				text " hey yo "
+			else
+				text " goodbye "
+			fi
+			text \n
+			text \n
+		else
+			do < y z
+				text "<3 "
+				set y + y 1
+			od
+			text \n
+			text \n
+		fi
+		set x + x 1
+		set z - z 1
+	od
+ fi
+
+defun fact params n smarap
+    if < n 2 return 1 fi
+    return * n call fact args - n 1 sgra
+nufed
+
+var G 1
+do < G 10
+    output G
+    text "! is "
+    output call fact args G sgra
+    text \n
+    set G + G 1
+od
+ 
