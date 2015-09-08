@@ -18,3 +18,18 @@
 *   Compile the program using test1.blip and look at the code in that file
 *   to see some exploration of the blip language. 
 */
+
+
+/*  Spell Checker
+*   C++ program which serves as a spell checker. Specify a text file and it
+*   will compare it to words in a "dictionary" file.
+*   look at main.cpp 
+*   Look at the definition of generalTest3, for example. There are two lines
+*   for readFile. One for the name of the article to check and one for
+*   a dictionary.
+*   Run the program and watch as it does it's intended function.
+*   My initial implementation of the program involved checking each word in the
+*   article with each word in the dictionary to see if it found a match.
+*   I later optimized it by creating an array of pointers to each word in the dictionary
+*   and from there, using a binary search to see if there is a match in the dictionary
+*/
