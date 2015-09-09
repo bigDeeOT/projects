@@ -59,9 +59,6 @@ void punctuationTests(void) {
 	printf("****DONE****\n");
 }
 
-bulldog blah
-
-kat fire
 
 void generalTest1(void) {
 	printf("\n\n******* Starting General Test #1 *******\n");
